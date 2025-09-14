@@ -6,6 +6,6 @@ def call(Map args = [:]) {
 
     sh """ docker stop ${CONTAINER_NAME} || true
            docker rm ${CONTAINER_NAME} || true
-           docker run -d -p ${HostPort}:${containerPort} --name ${CONTAINER_NAME} ${IMAGE_NAME}
+           docker run -d -p ${hostPort}:${containerPort} --name ${CONTAINER_NAME} ${IMAGE_NAME}
        """   
 }
